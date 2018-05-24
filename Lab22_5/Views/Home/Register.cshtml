@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+
+    <style>
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        .purple {
+            background: purple;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .yellow {
+            background: yellow;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+
+    <h1>Welcome @Session["name"]</h1>
+    <h4>You are now logged in.</h4>
+    <table class="table table-striped">
+        <tr>
+            <th>Color</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>@Session["color"]</td>
+            <td>@Session["city"]</td>
+        </tr>
+    </table>
+
+
+<script>
+   
+</script>
+
+
+
+
