@@ -2,43 +2,25 @@
     ViewBag.Title = "Home Page";
 }
 
-<form class="form-horizontal" action="Home/Register" method="get" onsubmit="ColorFunction();">
+<h1>Login</h1>
+<style>
+    body {
+        background-color: @Session["color"];
+    }
+</style>
 
-    <div class="form-group">
-        <label for="Name" class="col-sm-6 control-label"></label>
-        <div class="col-sm-6"></div>
-        <input type="text" name="Name" id="name" class="form-control" placeholder="Name" />
-    </div>
+<form id="login" action="Home/Register" method="post">
+    <input type="text" name="name" value="@Session["name"]" placeholder="Name" /><br />
+    <select name="color" id="select1">
+        <option value="" disabled selected>Choose a color for your theme</option>
+        <option class="purple" name="color" value="@Session["color"]">Purple</option>
+        <option class="yellow" name="color" value="@Session["color"]">Yellow</option>
+        <option class="red" name="color" value="@Session["color"]">Red</option>
+        <option class="green" name="color" value="@Session["color"]">Green</option>
+        <option class="blue" name="color" value="@Session["color"]">Blue</option>
+    </select><br />   
+    <input type="text" name="userName" value="@Session["userName"]" placeholder="username" /><br />
+    <input type="submit" class="btn btn-primary" value="Continue" />
 
-    <div class="form-group">
-        <label for="Color" class="col-sm-6 control-label"></label>
-        <div class="col-sm-6"></div>
-        <select name="color" id="select1">
-            <option class="purple" value="Purple">Purple</option>
-            <option class="yellow" value="Yellow">Yellow</option>
-            <option class="red" value="Red">Red</option>
-            <option class="green" value="Green">Green</option>
-            <option class="blue" value="Blue">Blue</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="Age" class="col-sm-6 control-label"></label>
-        <div class="col-sm-6"></div>
-        <input type="text" name="City" id="city" class="form-control" placeholder="City" />
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4" style="text-align:center">
-
-            <input type="submit" class="btn btn-primary" value="Log In" />
-            <!-- <input type="reset" class="btn btn-warning" value="Reset Form" />-->
-        </div>
-        <div class="col-sm-4"></div>
-    </div> 
 </form>
-
-
-
-
 

@@ -2,52 +2,27 @@
 @{
     ViewBag.Title = "Register";
 }
+<style>
+    body{
+        background-color: @Session["color"]
+    }
+</style>
+
+<h1>Verify</h1>
+<p> Name: @Session["name"]</p>
+<p>  Theme: @Session["color"]</p>
+<p>  Username: @Session["userName"] </p>
+
+<form action="/Home/Welcome">
+    <input type="submit" class="btn btn-primary" value="Yes, log me in" /><br />
+    </form>
 
 
-    <style>
-        th {
-            background-color: black;
-            color: white;
-        }
-
-        .purple {
-            background: purple;
-        }
-
-        .red {
-            background: red;
-        }
-
-        .yellow {
-            background: yellow;
-        }
-
-        .green {
-            background: green;
-        }
-
-        .blue {
-            background: blue;
-        }
-    </style>
-
-    <h1>Welcome @Session["name"]</h1>
-    <h4>You are now logged in.</h4>
-    <table class="table table-striped">
-        <tr>
-            <th>Color</th>
-            <th>City</th>
-        </tr>
-        <tr>
-            <td>@Session["color"]</td>
-            <td>@Session["city"]</td>
-        </tr>
-    </table>
 
 
-<script>
-   
-</script>
+
+
+
 
 
 

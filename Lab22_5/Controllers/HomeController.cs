@@ -27,27 +27,17 @@ namespace Lab22_5.Controllers
             return View();
         }
 
-        public ActionResult Register(string name, string color, string city)
-        {  
-            //if form parameters null, add them to Session values
+        public ActionResult Register(string name, string color, string userName)
+        {                  
+            Session["name"] = name;
+            Session["color"] = color;
+            Session["userName"] = userName;            
 
-            if (Session["name"] == null)
-            {
-                Session.Add("name", name);
-            }           
-           
-            if (Session["color"] == null)
-            {
-                Session.Add("color", color);
-                
-            }           
+            return View();
+        }
 
-            if (Session["city"] == null)
-            {
-                Session.Add("city", city);
-               
-            }           
-
+        public ActionResult Welcome()
+        {
             return View();
         }
         // clears Session data 

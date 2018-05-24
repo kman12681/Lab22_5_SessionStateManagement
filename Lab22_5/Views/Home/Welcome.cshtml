@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<style>
+    th {
+        background-color: black;
+        color: white;
+    }
+
+    body{
+        background-color: @Session["color"];
+    }
+</style>
+
+<body>
+    <h1>Welcome @Session["name"]</h1>
+    <h4>You are now logged in.</h4>
+    <table class="table table-striped">
+        <tr>
+            <th>Theme</th>
+            <th>UserName</th>
+        </tr>
+        <tr>
+            <td>@Session["color"]</td>
+            <td>@Session["userName"]</td>
+        </tr>
+    </table>
+</body>
